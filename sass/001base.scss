@@ -1,0 +1,9 @@
+$bg-color: #EEEEEE;
+$blue: rgb(171, 164, 252);
+$pink: rgb(231, 149, 167);
+body {
+    margin: 0;
+    background-color: $bg-color;
+    position: relative;
+    box-sizing: border-box;
+}

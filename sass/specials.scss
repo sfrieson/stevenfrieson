@@ -1,0 +1,63 @@
+@keyframes dash {
+    65% {
+        stroke-dashoffset: 0;
+        fill: #eee;
+    }
+    75% {
+        stroke-dashoffset: 0;
+        fill: #eee;
+    }
+    100% {
+        fill: black;
+        stroke-dashoffset: 0;
+    }
+}
+
+#steven.frieson {
+    fill: #000;
+    width: 60vw;
+
+    path {
+        stroke-width: .2px;
+        stroke: black;
+        fill: #eee;
+        animation: dash 3s ease-in-out forwards;
+    }
+
+}
+
+#top-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    svg {
+        width: 60vw;
+        fill: rgb(66, 110, 241);
+    }
+}
+
+#white-logo {
+    height: 10vh;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    fill: #fff;
+    z-index: 2;
+
+    img {
+        height:10vh
+    }
+}
+
+#scroll-arrow {
+    img {
+
+        height: 100px;
+    }
+}
+
+.placeholder {
+    opacity: 0;
+}

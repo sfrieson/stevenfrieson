@@ -5,7 +5,7 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                
+
             },
             js: {
                 files: {
@@ -15,16 +15,28 @@ module.exports = function(grunt){
         },
 
         watch: {
-            js: {
-                files: ['js/**/*'],
-                tasks: ['js_compile']
-            },
             sass: {
                 files: ['sass/**/*'],
                 tasks: ['sass_compile'],
                 options: {
-                    interrupt: false,
-                    spawn: false
+                  interrupt: false,
+                  spawn: false,
+                }
+            },
+            js: {
+                files: ['js/**/*'],
+                tasks: ['js_compile'],
+                options: {
+                  interrupt: false,
+                  spawn: false,
+                }
+            },
+            html: {
+                files: ['html/*'],
+                tasks: ['html_concat'],
+                options: {
+                  interrupt: false,
+                  spawn: false,
                 }
             }
         },
@@ -35,16 +47,21 @@ module.exports = function(grunt){
             },
             js: {
                 src: [
-                    "js/test.js",
-                    "js/test1.js"
+                    "js/*.js", "!js/master.js"
                 ],
                 dest: 'js/master.js'
             },
             scss: {
                 src: [
-                    'scss/*.scss', '!scss/master.scss'
+                    'sass/*.scss', '!sass/master.scss'
                 ],
-                dest: 'scss/master.scss'
+                dest: 'sass/master.scss'
+            },
+            html: {
+                src: [
+                    'html/*.html'
+                ],
+                dest: 'public/index.html'
             }
         },
 
@@ -54,7 +71,7 @@ module.exports = function(grunt){
                 limit: 10
             },
             monitor: {
-                tasks: ["watch:js", "watch:sass"] //removed "server"
+                tasks: ["watch:js", "watch:sass", "watch:html"]
             }
         },
 
@@ -86,6 +103,16 @@ module.exports = function(grunt){
                     duration: 1
                 }
             },
+
+            html_concat: {
+                options: {
+                    enabled: true,
+                    message: 'HTML Concatonated!',
+                    title: "stevenfrieson.com",
+                    success: true,
+                    duration: 1
+                }
+            }
         },
 
         sass: {
@@ -95,16 +122,16 @@ module.exports = function(grunt){
                     sourcemap: false
                 },
                 files: {
-                    'public/css/style.css': 'scss/master.scss'
+                    'public/css/style.css': 'sass/master.scss'
                 }
             },
             min: {
                 options: {
                     outputStyle: 'compressed',
-                    courcemap: false
+                    sourcemap: false
                 },
                 files: {
-                    'public/css/style.min.css': 'scss/master.scss'
+                    'public/css/style.min.css': 'sass/master.scss'
                 }
             }
         }
@@ -118,6 +145,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('js_compile', ['concat:js', 'uglify', 'notify:js_compile']);
-    grunt.registerTask('sass_compile', ['concat:scss', 'sass:min', 'notify:sass_compile']);
+    grunt.registerTask('sass_compile', ['concat:scss', 'sass:expanded', 'sass:min', 'notify:sass_compile']);
+    grunt.registerTask('html_concat', ['concat:html', 'notify:html_concat']);
     grunt.registerTask('monitor', ["concurrent:monitor"]);
 };

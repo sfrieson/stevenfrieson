@@ -1,0 +1,129 @@
+$bg-color: #EEEEEE;
+$blue: rgb(171, 164, 252);
+$pink: rgb(231, 149, 167);
+body {
+    margin: 0;
+    background-color: $bg-color;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.page {
+    height: 100vh;
+}
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+@keyframes dash {
+    65% {
+        stroke-dashoffset: 0;
+        fill: #eee;
+    }
+    75% {
+        stroke-dashoffset: 0;
+        fill: #eee;
+    }
+    100% {
+        fill: black;
+        stroke-dashoffset: 0;
+    }
+}
+
+#steven.frieson {
+    fill: #000;
+    width: 60vw;
+
+    path {
+        stroke-width: .2px;
+        stroke: black;
+        fill: #eee;
+        animation: dash 3s ease-in-out forwards;
+    }
+
+}
+
+#top-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    svg {
+        width: 60vw;
+        fill: rgb(66, 110, 241);
+    }
+}
+
+#white-logo {
+    height: 10vh;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    fill: #fff;
+    z-index: 2;
+
+    img {
+        height:10vh
+    }
+}
+
+#scroll-arrow {
+    img {
+
+        height: 100px;
+    }
+}
+
+.placeholder {
+    opacity: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+$font-color: rgb(31, 32, 37);
+$font-size: 20px;
+$Baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+$SourceSans: Source Sans Pro, "Source Sans Pro", Futura, "Helvetica Neue", Helvetica, sans-serif;
+
+
+body {
+    color: $font-color;
+    font-family: $SourceSans;
+    font-size: $font-size;
+}
+#title {
+    font-size: 10vw;
+
+    position: relative;
+}
+h1, h2 {
+    font-family: $Baskerville;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2.125em;
+}
+h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+h6 {
+    font-size: .75em;
+    font-weight: 600;
+}
