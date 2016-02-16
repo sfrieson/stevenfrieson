@@ -1,0 +1,53 @@
+$columns: 5;
+$grid-max-width: 1200px;
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+        }
+    &:after {
+        clear: both;
+        }
+    }
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    }
+.wrapper, .row{
+    @extend %clearfix;
+    }
+.row {
+    margin-bottom: 3em;
+}
+
+
+[class*='col-'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px;
+    }
+
+@media #{$breakpoint-medium} {
+    .wrapper {
+        width: 95%;
+        max-width: $grid-max-width;
+        }
+
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            width: 100% / $columns * $i;
+            }
+        }
+    }
+
+
+.card{
+    background-color: white;
+    padding: 10px;
+    border-left: 8px solid $blue;
+}

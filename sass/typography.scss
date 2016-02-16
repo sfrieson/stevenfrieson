@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 $font-color: rgb(31, 32, 37);
-$font-size: 20px;
+$font-size: 125%;
 $Baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 $SourceSans: Source Sans Pro, "Source Sans Pro", Futura, "Helvetica Neue", Helvetica, sans-serif;
 
@@ -41,4 +41,14 @@ h5 {
 h6 {
     font-size: .75em;
     font-weight: 600;
+}
+
+.quote {
+    text-align: center;
+    width: 75vw;
+    color: $pink;
+    position: relative;
+    top: -8vh;
+    line-height: 150%;
+    letter-spacing: .05em;
 }

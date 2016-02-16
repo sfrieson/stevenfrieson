@@ -1,9 +1,43 @@
 $bg-color: #EEEEEE;
-$blue: rgb(171, 164, 252);
-$pink: rgb(231, 149, 167);
-body {
+$blue: #2BC1E6;
+$pink: #FF2A64;
+$yellow: #F5D800;
+$green: #03F443;
+
+*, *:after, *:before {
     margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
     background-color: $bg-color;
     position: relative;
-    box-sizing: border-box;
+    
+}
+
+font-pink {
+    color:$pink;
+}
+bg-pink {
+    background-color: $pink;
+}
+font-blue {
+    color:$blue;
+}
+bg-blue {
+    background-color: $blue;
+}
+font-green {
+    color:$green;
+}
+bg-green {
+    background-color: $green;
+}
+font-yellow {
+    color:$yellow;
+}
+bg-yellow {
+    background-color: $yellow;
 }

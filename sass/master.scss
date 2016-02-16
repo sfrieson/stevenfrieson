@@ -1,23 +1,136 @@
 $bg-color: #EEEEEE;
-$blue: rgb(171, 164, 252);
-$pink: rgb(231, 149, 167);
-body {
+$blue: #2BC1E6;
+$pink: #FF2A64;
+$yellow: #F5D800;
+$green: #03F443;
+
+*, *:after, *:before {
     margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
     background-color: $bg-color;
     position: relative;
-    box-sizing: border-box;
+    
+}
+
+font-pink {
+    color:$pink;
+}
+bg-pink {
+    background-color: $pink;
+}
+font-blue {
+    color:$blue;
+}
+bg-blue {
+    background-color: $blue;
+}
+font-green {
+    color:$green;
+}
+bg-green {
+    background-color: $green;
+}
+font-yellow {
+    color:$yellow;
+}
+bg-yellow {
+    background-color: $yellow;
+}
+
+$columns: 5;
+$grid-max-width: 1200px;
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+        }
+    &:after {
+        clear: both;
+        }
+    }
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    }
+.wrapper, .row{
+    @extend %clearfix;
+    }
+.row {
+    margin-bottom: 3em;
+}
+
+
+[class*='col-'] {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px;
+    }
+
+@media #{$breakpoint-medium} {
+    .wrapper {
+        width: 95%;
+        max-width: $grid-max-width;
+        }
+
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            width: 100% / $columns * $i;
+            }
+        }
+    }
+
+
+.card{
+    background-color: white;
+    padding: 10px;
+    border-left: 8px solid $blue;
 }
 
 .page {
     height: 100vh;
+    margin-bottom: 5vh;
 }
-.flex-center {
+.flex-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     flex-direction: column;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#visit-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    div {
+        text-align: center;
+        margin: 2em;
+        }
+    img {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+        }
+    }
 
 @keyframes dash {
     65% {
@@ -58,7 +171,19 @@ body {
         fill: rgb(66, 110, 241);
     }
 }
+#contact-triangle {
+    position: absolute;
+    width: 60vw;
+    bottom: -1;
+    left: -1;
 
+
+}
+#logo {
+    width: 20vw;
+    float:right;
+    margin: 5vw;
+}
 #white-logo {
     height: 10vh;
     position: absolute;
@@ -68,7 +193,9 @@ body {
     z-index: 2;
 
     img {
-        height:10vh
+        height:10vh;
+        position: relative;
+        bottom:0;
     }
 }
 
@@ -85,7 +212,7 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 $font-color: rgb(31, 32, 37);
-$font-size: 20px;
+$font-size: 125%;
 $Baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 $SourceSans: Source Sans Pro, "Source Sans Pro", Futura, "Helvetica Neue", Helvetica, sans-serif;
 
@@ -126,4 +253,14 @@ h5 {
 h6 {
     font-size: .75em;
     font-weight: 600;
+}
+
+.quote {
+    text-align: center;
+    width: 75vw;
+    color: $pink;
+    position: relative;
+    top: -8vh;
+    line-height: 150%;
+    letter-spacing: .05em;
 }

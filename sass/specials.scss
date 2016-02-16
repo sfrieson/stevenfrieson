@@ -37,7 +37,19 @@
         fill: rgb(66, 110, 241);
     }
 }
+#contact-triangle {
+    position: absolute;
+    width: 60vw;
+    bottom: -1;
+    left: -1;
 
+
+}
+#logo {
+    width: 20vw;
+    float:right;
+    margin: 5vw;
+}
 #white-logo {
     height: 10vh;
     position: absolute;
@@ -47,7 +59,9 @@
     z-index: 2;
 
     img {
-        height:10vh
+        height:10vh;
+        position: relative;
+        bottom:0;
     }
 }
 

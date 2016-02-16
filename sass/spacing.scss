@@ -1,0 +1,35 @@
+.page {
+    height: 100vh;
+    margin-bottom: 5vh;
+}
+.flex-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#visit-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    div {
+        text-align: center;
+        margin: 2em;
+        }
+    img {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+        }
+    }
