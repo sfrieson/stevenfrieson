@@ -1,0 +1,76 @@
+@mixin btn($color) {
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
+    text-transform: uppercase;
+    display: relative;
+    transition: all .1s ease-in-out;
+    position: relative;
+    &:active {
+        box-shadow: none;
+        transform: translateY(4px);
+        box-shadow: 0 1px 0 darken($color, 15%);
+        }
+    }
+@mixin small($color) {
+    padding:5px 10px;
+    background-color: white;
+    box-shadow: 0 5px 0 $color;
+    border: 1px solid $color;
+    margin: 10px 0;
+    letter-spacing: .05em;
+    display: inline-block;
+    font-size: .75em;
+    }
+@mixin large($color) {
+    padding: 10px 20px;
+    background-color: $color;
+    box-shadow: 0 5px 0 darken($color, 15%);
+    text-shadow: 0 -2px 1px lighten($color, 20%);
+    border-bottom: 2px solid darken($color, 7%);
+    letter-spacing: .08em;
+    font-weight: 700;
+    }
+
+.blue-btn {
+    @include btn($blue);
+    @include large($blue);
+}
+.blue-btn-sm {
+    @include btn($blue);
+    @include small($blue);
+}
+.pink-btn {
+    @include btn($pink);
+    @include large($pink);
+}
+.pink-btn-sm {
+    @include btn($pink);
+    @include small($pink);
+}
+.yellow-btn {
+    @include btn($yellow);
+    @include large($yellow);
+}
+.yellow-btn-sm {
+    @include btn($yellow);
+    @include small($yellow);
+}
+.green-btn {
+    @include btn($green);
+    @include large($green);
+}
+.green-btn-sm {
+    @include btn($green);
+    @include small($green);
+}
+
+
+.image {
+    border: 5px solid $bg-color;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    max-width: 95%;
+
+}

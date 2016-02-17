@@ -3,6 +3,7 @@ $blue: #2BC1E6;
 $pink: #FF2A64;
 $yellow: #F5D800;
 $green: #03F443;
+$font-color: rgb(41, 40, 47);
 
 *, *:after, *:before {
     margin: 0;
@@ -14,30 +15,31 @@ $green: #03F443;
 body {
     background-color: $bg-color;
     position: relative;
-    
+    color: $font-color;
+
 }
 
-font-pink {
+.font-pink {
     color:$pink;
 }
-bg-pink {
+.bg-pink {
     background-color: $pink;
 }
-font-blue {
+.font-blue {
     color:$blue;
 }
-bg-blue {
+.bg-blue {
     background-color: $blue;
 }
-font-green {
+.font-green {
     color:$green;
 }
-bg-green {
+.bg-green {
     background-color: $green;
 }
-font-yellow {
+.font-yellow {
     color:$yellow;
 }
-bg-yellow {
+.bg-yellow {
     background-color: $yellow;
 }

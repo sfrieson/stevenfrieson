@@ -46,8 +46,11 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
     }
 
 
-.card{
+.card, [class*='card-']{
     background-color: white;
     padding: 10px;
-    border-left: 8px solid $blue;
 }
+.card-blue {border-left: 8px solid $blue;}
+.card-pink {border-left: 8px solid $pink;}
+.card-yellow {border-left: 8px solid $yellow;}
+.card-green {border-left: 8px solid $green;}
