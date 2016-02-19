@@ -485,3 +485,9 @@ h6 {
   line-height: 150%;
   letter-spacing: .05em;
 }
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .quote {
+    font-size: 10vw;
+  }
+}
