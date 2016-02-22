@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Steven Frieson | Developer + Designer</title>
     <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
     <script src="js/scripts.min.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The website of full-stack developer and graphic designer Steven Frieson.  See his portfolio, blog, and resume.">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-16686332-1', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');
+    </script>
 </head>
 <body>
 
@@ -81,7 +92,7 @@
         </div>
         <div class="row">
             <div class="col-5 flex-center">
-                <a class="blue-btn" href="/resume.html">
+                <a id="view-resume" class="blue-btn" href="/resume.html">
                     View my full resume
                 </a>
             </div>
@@ -101,9 +112,9 @@
         <div class="row">
             <div class="col-2">
                 <h3>PantryApp</h3>
-                <a class="yellow-btn-sm" href="http://pantryapp.stevenfrieson.com/" target="_blank">Make a list</a>
+                <a id="pantry-app"class="yellow-btn-sm" href="http://pantryapp.stevenfrieson.com/" target="_blank">Make a list</a>
                 <ul class="links">
-                    <li><a href="https://github.com/sfrieson/PantryApp" target="_blank">GitHub</a></li>
+                    <li><a id="pantryapp-github"href="https://github.com/sfrieson/PantryApp" target="_blank">GitHub</a></li>
                 </ul>
                 <ul class="technologies">
                     Technologies:
@@ -125,9 +136,9 @@
         <div class="row">
             <div class="col-2">
                 <h3>Guac-A-Mole</h3>
-                <a class="yellow-btn-sm" href="http://sfrieson.github.io/Guac-A-Mole" target="_blank">Make some Guac</a>
+                <a id="guac-a-mole" class="yellow-btn-sm" href="http://sfrieson.github.io/Guac-A-Mole" target="_blank">Make some Guac</a>
                 <ul class="links">
-                    <li><a href="https://github.com/sfrieson/Guac-A-Mole" target="_blank">GitHub</a></li>
+                    <li><a id="guac-a-mole-github" href="https://github.com/sfrieson/Guac-A-Mole" target="_blank">GitHub</a></li>
                 </ul>
                 <ul class="technologies">
                     Technologies:
@@ -146,9 +157,9 @@
         <div class="row">
             <div class="col-2">
                 <h3>GetSun</h3>
-                <a class="yellow-btn-sm" href="https://getsun.herokuapp.com" target="_blank">Get some Sun</a>
+                <a id="getsun" class="yellow-btn-sm" href="https://getsun.herokuapp.com" target="_blank">Get some Sun</a>
                 <ul class="links">
-                    <li><a href="https://github.com/analins/FunInTheSun" target="_blank">GitHub</a></li>
+                    <li><a id="getsun-github" href="https://github.com/analins/FunInTheSun" target="_blank">GitHub</a></li>
                 </ul>
                 <ul class="technologies">
                     Technologies:
@@ -166,7 +177,7 @@
 
         <!-- <div class="row">
             <div class="col-5 flex-center">
-                <a class="yellow-btn" href="javascript:;">
+                <a id="view-portfolio" class="yellow-btn" href="javascript:;">
                     View my full portfolio
                 </a>
             </div>
@@ -181,19 +192,19 @@
         </div>
     </div>
     <div id="visit-logos">
-        <a href="https://www.behance.net/sfrieson" target="_blank">
+        <a id="visit-me-behance" href="https://www.behance.net/sfrieson" target="_blank">
             <div><img src="images/svg/behance.svg" alt="Behance Logo">Behance</div>
         </a>
-        <a href="https://github.com/sfrieson" target="_blank">
+        <a id="visit-me-github" href="https://github.com/sfrieson" target="_blank">
             <div><img src="images/svg/github.svg" alt="GitHub Logo">GitHub</div>
         </a>
-        <a href="https://www.linkedin.com/in/sfrieson" target="_blank">
+        <a id="visit-me-linkedin" href="https://www.linkedin.com/in/sfrieson" target="_blank">
             <div><img src="images/svg/linkedin.svg" alt="LinkedIn Logo">LinkedIn</div>
         </a>
-        <a href="https://www.npmjs.com/~sfrieson" target="_blank">
+        <a id="visit-me-npm" href="https://www.npmjs.com/~sfrieson" target="_blank">
             <div><img id="npm" src="images/svg/npm.svg" alt="NPM Logo">NPM</div>
         </a>
-        <a href="http://stackoverflow.com/users/5475906/tenor528" target="_blank">
+        <a id="visit-me-stackoverflow" href="http://stackoverflow.com/users/5475906/tenor528" target="_blank">
             <div><img src="images/svg/so.svg" alt="Stack Overflow Logo">Stack Overflow</div>
         </a>
     </div>
@@ -204,7 +215,7 @@
 
 
 
-    <a id="email" href="mailto:__user__@__host__?subject=I found your portfolio site!&body=Hi Steven! I found your portfolio and I really liked it. I have a gig that you might be a good fit for.  Let me tell you about it..." target="_blank">
+    <a id="contact-me-code" class="email" href="mailto:__user__@__host__?subject=I found your portfolio site!&body=Hi Steven! I found your portfolio and I really liked it. I have a gig that you might be a good fit for.  Let me tell you about it..." target="_blank">
         <img id="contact-triangle" src="images/svg/contact.svg" alt="Contact Me" />
     </a>
         <div id="logo">

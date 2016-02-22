@@ -32,7 +32,7 @@ module.exports = function(grunt){
                 }
             },
             html: {
-                files: ['html/*'],
+                files: ['html/**/*'],
                 tasks: ['html_concat'],
                 options: {
                   interrupt: false,
@@ -57,11 +57,17 @@ module.exports = function(grunt){
                 ],
                 dest: 'sass/master.scss'
             },
-            html: {
+            index: {
                 src: [
-                    'html/*.html'
+                    'html/index/*.html'
                 ],
                 dest: 'public/index.html'
+            },
+            resume: {
+                src: [
+                    'html/resume/*.html'
+                ],
+                dest: 'public/resume.html'
             }
         },
 
@@ -146,6 +152,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('js_compile', ['concat:js', 'uglify', 'notify:js_compile']);
     grunt.registerTask('sass_compile', ['concat:scss', 'sass:expanded', 'sass:min', 'notify:sass_compile']);
-    grunt.registerTask('html_concat', ['concat:html', 'notify:html_concat']);
+    grunt.registerTask('html_concat', ['concat:index', 'concat:resume', 'notify:html_concat']);
     grunt.registerTask('monitor', ["concurrent:monitor"]);
 };
