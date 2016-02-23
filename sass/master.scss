@@ -16,9 +16,15 @@ body {
     background-color: $bg-color;
     position: relative;
     color: $font-color;
+    margin:0;
 
 }
-
+html {
+    margin: 0;
+}
+html, body {
+    margin:0;
+}
 .font-pink {
     color:$pink;
 }
@@ -42,6 +48,13 @@ body {
 }
 .bg-yellow {
     background-color: $yellow;
+}
+
+ul {
+    margin:{
+        left: 1em;
+        bottom: .5em;
+    }
 }
 
 @mixin btn($color) {
@@ -172,15 +185,42 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
 .card, [class*='card-']{
     background-color: white;
     padding: 10px;
+
+    h5 {
+        display: inline-block;
+    }
 }
 .card-blue {border-left: 8px solid $blue;}
 .card-pink {border-left: 8px solid $pink;}
 .card-yellow {border-left: 8px solid $yellow;}
 .card-green {border-left: 8px solid $green;}
 
+nav {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top:0;
+    z-index: 99;
+    background-color: #aaa;
+    text-align: right;
+    padding: {
+        right: 1em;
+        left: 2em;
+        top: .5em;
+        bottom: .5em;
+    }
+}
 .page {
     height: 100vh;
     margin-bottom: 5vh;
+}
+.header-page {
+    height: 15vh;
+    margin-bottom: 5vh;
+}
+.block {
+    display:block;
+    height: 32.5vw;
 }
 .flex-title {
     display: flex;
@@ -196,6 +236,7 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
     height: 100%;
     width: 100%;
 }
+
 
 #visit-logos {
     display: flex;
@@ -217,6 +258,9 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
         color: $font-color;
         }
     }
+#visit-me-npm img {
+    padding-bottom: 25px;
+}
 
 @keyframes dash {
     65% {
@@ -260,15 +304,23 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
 #contact-triangle {
     position: absolute;
     width: 60vw;
-    bottom: -1;
-    left: -1;
+    max-width: 580px;
+    min-width: 300px;
+    bottom: 0px;
+    // left: 0;
 
 
 }
 #logo {
     width: 20vw;
-    float:right;
-    margin: 5vw;
+    // float:right;
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin: {
+        right: 5vw;
+        bottom: 5vw
+    }
 }
 #white-logo {
     height: 10vh;
@@ -308,11 +360,6 @@ body {
     font-family: $SourceSans;
     font-size: $font-size;
 }
-#title {
-    font-size: 10vw;
-
-    position: relative;
-}
 h1, h2 {
     font-family: $Baskerville;
     font-weight: 400;
@@ -341,6 +388,21 @@ h6 {
     font-weight: 600;
 }
 
+#title {
+    font-size: 10vw;
+
+    position: relative;
+}
+nav #title {
+    font-size: 2em;
+    float: left;
+    color: white;
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+}
+
 .quote {
     text-align: center;
     width: 75vw;
@@ -355,4 +417,23 @@ h6 {
         font-size: 10vw;
     }
 
+}
+
+ul.skills {
+    list-style: none;
+    margin: 0;
+    li {
+        margin: 0;
+        display: inline-block;
+        padding: {
+            left: .25em;
+        }
+        &:after {
+            padding-left: .4em;
+            content: "|"
+        }
+        &:last-child:after {
+            content: ""
+        }
+    }
 }

@@ -10,11 +10,6 @@ body {
     font-family: $SourceSans;
     font-size: $font-size;
 }
-#title {
-    font-size: 10vw;
-
-    position: relative;
-}
 h1, h2 {
     font-family: $Baskerville;
     font-weight: 400;
@@ -43,6 +38,21 @@ h6 {
     font-weight: 600;
 }
 
+#title {
+    font-size: 10vw;
+
+    position: relative;
+}
+nav #title {
+    font-size: 2em;
+    float: left;
+    color: white;
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+}
+
 .quote {
     text-align: center;
     width: 75vw;
@@ -57,4 +67,23 @@ h6 {
         font-size: 10vw;
     }
 
+}
+
+ul.skills {
+    list-style: none;
+    margin: 0;
+    li {
+        margin: 0;
+        display: inline-block;
+        padding: {
+            left: .25em;
+        }
+        &:after {
+            padding-left: .4em;
+            content: "|"
+        }
+        &:last-child:after {
+            content: ""
+        }
+    }
 }

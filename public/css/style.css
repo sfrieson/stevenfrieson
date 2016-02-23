@@ -11,6 +11,15 @@ body {
   background-color: #EEEEEE;
   position: relative;
   color: #29282f;
+  margin: 0;
+}
+
+html {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
 }
 
 .font-pink {
@@ -43,6 +52,11 @@ body {
 
 .bg-yellow {
   background-color: #F5D800;
+}
+
+ul {
+  margin-left: 1em;
+  margin-bottom: .5em;
 }
 
 .blue-btn {
@@ -297,6 +311,10 @@ body {
   padding: 10px;
 }
 
+.card h5, [class*='card-'] h5 {
+  display: inline-block;
+}
+
 .card-blue {
   border-left: 8px solid #2BC1E6;
 }
@@ -313,9 +331,33 @@ body {
   border-left: 8px solid #03F443;
 }
 
+nav {
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  background-color: #aaa;
+  text-align: right;
+  padding-right: 1em;
+  padding-left: 2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
 .page {
   height: 100vh;
   margin-bottom: 5vh;
+}
+
+.header-page {
+  height: 15vh;
+  margin-bottom: 5vh;
+}
+
+.block {
+  display: block;
+  height: 32.5vw;
 }
 
 .flex-title {
@@ -355,6 +397,10 @@ body {
 #visit-logos a {
   text-decoration: none;
   color: #29282f;
+}
+
+#visit-me-npm img {
+  padding-bottom: 25px;
 }
 
 @keyframes dash {
@@ -399,14 +445,18 @@ body {
 #contact-triangle {
   position: absolute;
   width: 60vw;
-  bottom: -1;
-  left: -1;
+  max-width: 580px;
+  min-width: 300px;
+  bottom: 0px;
 }
 
 #logo {
   width: 20vw;
-  float: right;
-  margin: 5vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5vw;
+  margin-bottom: 5vw;
 }
 
 #white-logo {
@@ -436,11 +486,6 @@ body {
   color: #1f2025;
   font-family: Source Sans Pro, "Source Sans Pro", Futura, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 125%;
-}
-
-#title {
-  font-size: 10vw;
-  position: relative;
 }
 
 h1, h2 {
@@ -476,6 +521,22 @@ h6 {
   font-weight: 600;
 }
 
+#title {
+  font-size: 10vw;
+  position: relative;
+}
+
+nav #title {
+  font-size: 2em;
+  float: left;
+  color: white;
+}
+
+nav #title a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .quote {
   text-align: center;
   width: 75vw;
@@ -490,4 +551,24 @@ h6 {
   .quote {
     font-size: 10vw;
   }
+}
+
+ul.skills {
+  list-style: none;
+  margin: 0;
+}
+
+ul.skills li {
+  margin: 0;
+  display: inline-block;
+  padding-left: .25em;
+}
+
+ul.skills li:after {
+  padding-left: .4em;
+  content: "|";
+}
+
+ul.skills li:last-child:after {
+  content: "";
 }

@@ -16,9 +16,15 @@ body {
     background-color: $bg-color;
     position: relative;
     color: $font-color;
+    margin:0;
 
 }
-
+html {
+    margin: 0;
+}
+html, body {
+    margin:0;
+}
 .font-pink {
     color:$pink;
 }
@@ -42,4 +48,11 @@ body {
 }
 .bg-yellow {
     background-color: $yellow;
+}
+
+ul {
+    margin:{
+        left: 1em;
+        bottom: .5em;
+    }
 }
