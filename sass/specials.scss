@@ -1,30 +1,27 @@
-@keyframes dash {
-    65% {
-        stroke-dashoffset: 0;
-        fill: #eee;
-    }
-    75% {
-        stroke-dashoffset: 0;
-        fill: #eee;
-    }
-    100% {
-        fill: black;
-        stroke-dashoffset: 0;
-    }
-}
+// @keyframes dash {
+//     65% {
+//         stroke-dashoffset: 0;
+//         fill: #eee;
+//     }
+//     75% {
+//         stroke-dashoffset: 0;
+//         fill: #eee;
+//     }
+//     100% {
+//         fill: black;
+//         stroke-dashoffset: 0;
+//     }
+// }
 
 #steven.frieson {
-    fill: #000;
     width: 60vw;
-
-    path {
-        stroke-width: .2px;
-        stroke: black;
-        fill: #eee;
-        animation: dash 3s ease-in-out forwards;
-    }
-
 }
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #steven.frieson {
+        width: 90vw;
+    }
+}
+
 
 #top-triangle {
     position: absolute;

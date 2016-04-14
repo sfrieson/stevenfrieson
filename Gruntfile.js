@@ -68,6 +68,12 @@ module.exports = function(grunt){
                     'html/resume/*.html'
                 ],
                 dest: 'public/resume.html'
+            },
+            portfolio: {
+                src: [
+                    'html/portfolio/*.html'
+                ],
+                dest: 'public/portfolio.html'
             }
         },
 
@@ -152,6 +158,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('js_compile', ['concat:js', 'uglify', 'notify:js_compile']);
     grunt.registerTask('sass_compile', ['concat:scss', 'sass:expanded', 'sass:min', 'notify:sass_compile']);
-    grunt.registerTask('html_concat', ['concat:index', 'concat:resume', 'notify:html_concat']);
+    grunt.registerTask('html_concat', ['concat:index', 'concat:resume', 'concat:portfolio', 'notify:html_concat']);
     grunt.registerTask('monitor', ["concurrent:monitor"]);
 };

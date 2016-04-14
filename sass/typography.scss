@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 $font-color: rgb(31, 32, 37);
 $font-size: 125%;
 $Baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
@@ -40,7 +39,6 @@ h6 {
 
 #title {
     font-size: 10vw;
-
     position: relative;
 }
 nav #title {
@@ -50,6 +48,12 @@ nav #title {
     a {
         text-decoration: none;
         color:inherit;
+    }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    nav #title {
+        float: none;
+        color: black;
     }
 }
 

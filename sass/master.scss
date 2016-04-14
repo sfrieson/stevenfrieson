@@ -196,18 +196,35 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
 .card-green {border-left: 8px solid $green;}
 
 nav {
-    position: fixed;
-    display: block;
-    width: 100%;
-    top:0;
-    z-index: 99;
-    background-color: #aaa;
-    text-align: right;
-    padding: {
-        right: 1em;
-        left: 2em;
-        top: .5em;
-        bottom: .5em;
+    margin-bottom: 71px;
+    // position: relative;
+    // display: block;
+    // overflow: auto;
+    // width: 100%;
+    .wrapper {
+        position: fixed;
+        width: 100%;
+        top:0;
+        z-index: 99;
+        background-color: #aaa;
+        text-align: right;
+        padding: {
+            right: 1em;
+            left: 2em;
+            top: .5em;
+            bottom: .5em;
+        }
+    }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    nav {
+        margin-bottom: 0;
+
+        .wrapper {
+            position: relative;
+            text-align: center;
+            padding: .2em;
+        }
     }
 }
 .page {
@@ -215,8 +232,8 @@ nav {
     margin-bottom: 5vh;
 }
 .header-page {
-    height: 15vh;
-    margin-bottom: 5vh;
+    // height: 15vh;
+    padding: 5vh 0;
 }
 .home-footer {
     display:block;
@@ -265,33 +282,30 @@ nav {
     padding-bottom: 25px;
 }
 
-@keyframes dash {
-    65% {
-        stroke-dashoffset: 0;
-        fill: #eee;
-    }
-    75% {
-        stroke-dashoffset: 0;
-        fill: #eee;
-    }
-    100% {
-        fill: black;
-        stroke-dashoffset: 0;
-    }
-}
+// @keyframes dash {
+//     65% {
+//         stroke-dashoffset: 0;
+//         fill: #eee;
+//     }
+//     75% {
+//         stroke-dashoffset: 0;
+//         fill: #eee;
+//     }
+//     100% {
+//         fill: black;
+//         stroke-dashoffset: 0;
+//     }
+// }
 
 #steven.frieson {
-    fill: #000;
     width: 60vw;
-
-    path {
-        stroke-width: .2px;
-        stroke: black;
-        fill: #eee;
-        animation: dash 3s ease-in-out forwards;
-    }
-
 }
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #steven.frieson {
+        width: 90vw;
+    }
+}
+
 
 #top-triangle {
     position: absolute;
@@ -351,7 +365,6 @@ nav {
     opacity: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 $font-color: rgb(31, 32, 37);
 $font-size: 125%;
 $Baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
@@ -393,7 +406,6 @@ h6 {
 
 #title {
     font-size: 10vw;
-
     position: relative;
 }
 nav #title {
@@ -403,6 +415,12 @@ nav #title {
     a {
         text-decoration: none;
         color:inherit;
+    }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    nav #title {
+        float: none;
+        color: black;
     }
 }
 

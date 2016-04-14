@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
 *, *:after, *:before {
   margin: 0;
   padding: 0;
@@ -332,8 +331,11 @@ ul {
 }
 
 nav {
+  margin-bottom: 71px;
+}
+
+nav .wrapper {
   position: fixed;
-  display: block;
   width: 100%;
   top: 0;
   z-index: 99;
@@ -345,14 +347,24 @@ nav {
   padding-bottom: .5em;
 }
 
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  nav {
+    margin-bottom: 0;
+  }
+  nav .wrapper {
+    position: relative;
+    text-align: center;
+    padding: .2em;
+  }
+}
+
 .page {
   height: 100vh;
   margin-bottom: 5vh;
 }
 
 .header-page {
-  height: 15vh;
-  margin-bottom: 5vh;
+  padding: 5vh 0;
 }
 
 .home-footer {
@@ -407,31 +419,14 @@ nav {
   padding-bottom: 25px;
 }
 
-@keyframes dash {
-  65% {
-    stroke-dashoffset: 0;
-    fill: #eee;
-  }
-  75% {
-    stroke-dashoffset: 0;
-    fill: #eee;
-  }
-  100% {
-    fill: black;
-    stroke-dashoffset: 0;
-  }
-}
-
 #steven.frieson {
-  fill: #000;
   width: 60vw;
 }
 
-#steven.frieson path {
-  stroke-width: .2px;
-  stroke: black;
-  fill: #eee;
-  animation: dash 3s ease-in-out forwards;
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #steven.frieson {
+    width: 90vw;
+  }
 }
 
 #top-triangle {
@@ -539,6 +534,13 @@ nav #title {
 nav #title a {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  nav #title {
+    float: none;
+    color: black;
+  }
 }
 
 .quote {
